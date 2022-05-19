@@ -3,7 +3,7 @@ import { useTheme } from "../context/ThemeContext";
 function Theme() {
   const { theme, setTheme } = useTheme();
   return (
-    <div>
+    <div className="theme">
       <button
         className="theme-button"
         onClick={() => setTheme(theme === "light" ? "dark" : "light")}

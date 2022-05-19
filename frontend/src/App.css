@@ -12,6 +12,9 @@
   background-color: #f7f8fb;
   height: 100vh;
 }
+.theme{
+  position: sticky;
+}
 .theme-button {
   border: none;
   padding: 15px;
@@ -33,6 +36,6 @@
 }
 .dark .theme-button:hover {
   border: 1px solid #7463f4;
-  background-color: #ffffff;
-  color: #7463f4;
+  background-color: #0b064e;
+  color: #ffffff;
 }
