@@ -23,3 +23,13 @@ export const subscirbeChat = (cb) => {
     cb(message);
   });
 };
+
+// Sayfa açıldığında mevcut mesajları görmek. kanala abone olmak.
+
+export const subscribeInitialMessages = (cb) => {
+  if (!socket) return;
+  socket.on("message-list", (messages) => {
+    console.log("Inıtial", messages);
+    cb(messages);
+  });
+};
