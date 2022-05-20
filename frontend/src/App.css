@@ -1,9 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .app {
   text-align: center;
   height: 100%;
 }
+
 .app.dark {
-  color: #fff;
+  color: rgb(225, 225, 225);
   background-color: #13131a;
   height: 100vh;
 }
@@ -12,7 +19,7 @@
   background-color: #f7f8fb;
   height: 100vh;
 }
-.theme{
+.theme {
   position: sticky;
 }
 .theme-button {
@@ -31,11 +38,91 @@
   color: #c49450;
 }
 .dark .theme-button {
-  background-color: #7463f4;
+  background-color: #191740;
   color: #ffffff;
 }
 .dark .theme-button:hover {
-  border: 1px solid #7463f4;
-  background-color: #0b064e;
+  border: 1px solid #191740;
+  background-color: #3e3487;
   color: #ffffff;
+}
+.dark .chatlist {
+  border: solid 1px #000;
+  padding: 10px;
+  height: 500px;
+  width: 1200px;
+  margin: 40px auto 0 auto;
+  background-color: #191740;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.light .chatlist {
+  border: solid 1px #ddd;
+  padding: 10px;
+  height: 500px;
+  width: 1200px;
+  margin: 40px auto 0 auto;
+  background-color: #eeefef;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.chatlist > div {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  overflow: auto;
+  border-radius: 10px;
+}
+.light .textInput {
+  padding: 10px;
+  width: 1200px;
+  font-size: 16px;
+  background-color: #f7f8fb;
+  border: none;
+  border-bottom: 2px solid #c49450;
+  color: #114f5a;
+}
+.dark .textInput {
+  padding: 10px;
+  width: 1200px;
+  font-size: 16px;
+  background-color: #13131a;
+  border: none;
+  border-bottom: 2px solid #ff3af3;
+  color: #ddd;
+}
+
+.dark .chatItem {
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  background: #ff3af3;
+  padding: 12px 18px;
+  border: 0.5px solid rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.08);
+  max-width: 70%;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 6px;
+  margin-right: auto;
+}
+
+.light .chatItem {
+  font-size: 18px;
+  color: #114f5a;
+  border-radius: 8px;
+  background: #fff;
+  padding: 12px 18px;
+  border: 0.5px solid rgba(0, 0, 0, 0.02);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.08);
+  max-width: 70%;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 6px;
+  margin-right: auto;
+}
+
+.chatItem.right {
+  margin-right: 0;
+  margin-left: auto;
 }

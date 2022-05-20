@@ -1,9 +1,22 @@
-import React from "react";
+import { useState } from "react";
 
 function ChatForm() {
+  const [message, setMessage] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(message);
+    setMessage("");
+  };
   return (
     <div>
-      <h1>Chat Form</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          className="textInput"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+        />
+      </form>
     </div>
   );
 }

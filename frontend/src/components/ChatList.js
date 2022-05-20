@@ -1,9 +1,18 @@
 import React from "react";
+import { useChat } from "../context/ChatContext";
+import ChatItem from "./ChatItem";
+
 
 function ChatList() {
+  const { messages } = useChat();
+
   return (
-    <div>
-      <h1>Chat List</h1>
+    <div className="chatlist">
+      <div>
+        {messages.map((item, key) => (
+          <ChatItem key={key} item={item} />
+        ))}
+      </div>
     </div>
   );
 }
